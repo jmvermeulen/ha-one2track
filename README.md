@@ -21,9 +21,13 @@ Custom Home Assistant integration for [One2Track](https://www.one2track.nl/) GPS
 4. Search for **One2Track GPS**
 5. Enter your One2Track email and password (same credentials as the app or [one2trackgps.com](https://www.one2trackgps.com))
 
-### HACS (coming soon)
+### HACS
 
-Not yet available in HACS.
+1. Open HACS in Home Assistant
+2. Click the three dots menu (top right) > **Custom repositories**
+3. Add `https://github.com/jmvermeulen/ha-one2track` as **Integration**
+4. Search for **One2Track GPS** and install
+5. Restart Home Assistant
 
 ## Entities
 
