@@ -10,6 +10,7 @@ Custom Home Assistant integration for [One2Track](https://www.one2track.nl/) GPS
 - **Send messages** to the watch (max 30 characters)
 - **Force location update** to get a fresh GPS fix
 - **Send commands** to control watch settings (GPS mode, alarms, step counter, etc.)
+- **Multiple accounts** supported — add the integration multiple times for different One2Track accounts, each with their own watches
 
 ## Installation
 
