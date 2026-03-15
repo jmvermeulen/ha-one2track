@@ -1,0 +1,54 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "One2Track Login",
+        "description": "Enter your One2Track login credentials (same as the app or one2trackgps.com).",
+        "data": {
+          "username": "Email",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid email or password"
+    },
+    "abort": {
+      "already_configured": "This account is already configured"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": { "name": "Battery" },
+      "sim_balance": { "name": "SIM balance" },
+      "signal_strength": { "name": "Signal strength" },
+      "steps": { "name": "Steps" },
+      "speed": { "name": "Speed" },
+      "accuracy": { "name": "GPS accuracy" },
+      "altitude": { "name": "Altitude" },
+      "satellite_count": { "name": "Satellites" },
+      "status": {
+        "name": "Status",
+        "state": {
+          "gps": "GPS",
+          "wifi": "WiFi",
+          "offline": "Offline"
+        }
+      },
+      "location_type": {
+        "name": "Location type",
+        "state": {
+          "gps": "GPS",
+          "wifi": "WiFi",
+          "lbs": "Cell tower"
+        }
+      },
+      "address": { "name": "Address" },
+      "last_seen": { "name": "Last seen" },
+      "last_gps": { "name": "Last GPS update" }
+    },
+    "binary_sensor": {
+      "tumble": { "name": "Fall detected" }
+    }
+  }
+}

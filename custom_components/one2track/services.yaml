@@ -1,0 +1,62 @@
+send_message:
+  name: Send message
+  description: Send a text message to a One2Track watch (max 30 characters)
+  target:
+    entity:
+      integration: one2track
+      domain: device_tracker
+  fields:
+    message:
+      name: Message
+      description: The text message to send
+      required: true
+      example: "Time to come home!"
+      selector:
+        text:
+
+force_update:
+  name: Force location update
+  description: Activate positioning mode on the watch for ~2 minutes
+  target:
+    entity:
+      integration: one2track
+      domain: device_tracker
+
+send_command:
+  name: Send command
+  description: Send a raw command to the watch
+  target:
+    entity:
+      integration: one2track
+      domain: device_tracker
+  fields:
+    code:
+      name: Command code
+      description: "The function code (e.g. 0039=refresh location, 0048=shutdown, 0078=GPS tracking)"
+      required: true
+      example: "0039"
+      selector:
+        select:
+          options:
+            - label: "Refresh location"
+              value: "0039"
+            - label: "Shutdown watch"
+              value: "0048"
+            - label: "Set alarm"
+              value: "0057"
+            - label: "GPS tracking/powersave"
+              value: "0078"
+            - label: "Step counter"
+              value: "0079"
+    name:
+      name: Command name
+      description: Human-readable name (optional, for logging)
+      required: false
+      selector:
+        text:
+    value:
+      name: Command value
+      description: Value parameter for commands that require it
+      required: false
+      selector:
+        text:
