@@ -146,6 +146,7 @@ class One2TrackApiClient:
         if resp.status != 200:
             _LOGGER.debug("Session expired, re-authenticating")
             self._cookie = ""
+            self._session.cookie_jar.clear()
             await self.authenticate()
 
     async def async_get_devices(self) -> list[dict]:
